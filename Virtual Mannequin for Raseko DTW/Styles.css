@@ -1,0 +1,11 @@
+body{
+    margin-top: 20px;
+
+
+}
+input[type=range] {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    vertical-align: middle;
+    margin-top: 50px;
+}
