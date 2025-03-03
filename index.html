@@ -1,15 +1,149 @@
 <head>
-    <title>Clothing size calculator</title>
+    
     <link rel="stylesheet" href="Styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFit Mirror</title>
+   
     
 </head>
 <body>
     
-    <input type="range" min="140" max="220" id="myRange" />
-    <p>Height: <span id="demo"></span> cm</p>
-    <p>Shoulders: <span id="demo2"></span> cm</p>
-    <p>Torso: <span id="demo3"></span> cm</p>
-    <p>Lesgs: <span id="demo4"></span> cm</p>
+    <p><span id="demo5"></span></p>
+    
+   
+
+  <!-- Hidden input for barcode scanner (always focused) -->
+  <input type="text" id="barcode-input" class="barcode-input" autofocus>
+  
+  <div class="container">
+    <!-- Mirror View (Left Side) -->
+    <div class="mirror-view">
+      <div class="mannequin-container">
+        <div class="mannequin-placeholder">
+          
+          <p>Your personalized mannequin will appear here</p>
+          <p>Scan any item barcode to begin</p>
+        </div>
+      </div>
+      
+      <div class="scanner-notification" id="scan-notification">
+        Item successfully scanned: Classic Denim Jacket
+      </div>
+      
+      <div class="status-indicator">
+        <div class="status-light"></div>
+        <span>Ready to scan - Just scan any item barcode</span>
+      </div>
+      
+      <div class="nav-buttons">
+        <div class="nav-btn">&#10094;</div>
+        <div class="nav-btn">&#10095;</div>
+      </div>
+    </div>
+    
+    <!-- Sidebar (Right Side) -->
+    <div class="sidebar">
+      <div class="logo">
+        <h1>Smart<span>Fit</span></h1>
+      </div>
+      
+      <div class="profile-section">
+        <div class="profile-icon">G</div>
+        <div class="profile-info">
+          <h3>Guest User</h3>
+          <p>Tap to save your profile</p>
+        </div>
+      </div>
+
+      <div>
+        <input type="button" value="Teen" id="T">
+        <input type="button" value="Young Adult" id="YA">
+        <input type="button" value="Adult" id="A">
+    </div>
+      
+      <div class="section">
+        <h2 class="section-title">Your Measurements</h2>
+        <div class="measurements">
+        <p>Height: <span id="demo"></span> cm</p>
+        <p>Shoulders: <span id="demo2"></span> cm</p>
+        <p>Torso: <span id="demo3"></span> cm</p>
+        <p>Legs: <span id="demo4"></span> cm</p>
+        <input type="range" min="140" max="220" id="myRange" />
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">
+          Scanned Items
+          <div class="scan-indicator">
+            <button class="manual-input" id="manual-barcode">Enter Barcode Manually</button>
+          </div>
+        </h2>
+        
+        <div class="item-card">
+          <div class="item-info">
+            <div class="item-image"></div>
+            <div class="item-details">
+              <h3>Classic Denim Jacket</h3>
+              <p>Style #: DN-4223</p>
+              <p>Color: Medium Blue</p>
+            </div>
+          </div>
+          
+          <div class="size-recommendation">
+            <h4>Recommended Size</h4>
+            <p>Medium (M) - Based on your measurements</p>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="secondary-btn">Find in Store</button>
+            <button class="primary-btn">Add to Try-On List</button>
+          </div>
+        </div>
+        
+        <div class="item-card">
+          <div class="item-info">
+            <div class="item-image"></div>
+            <div class="item-details">
+              <h3>Slim Fit Chinos</h3>
+              <p>Style #: CH-1185</p>
+              <p>Color: Khaki</p>
+            </div>
+          </div>
+          
+          <div class="size-recommendation">
+            <h4>Recommended Size</h4>
+            <p>32W x 32L - Perfect fit for your measurements</p>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="secondary-btn">Find in Store</button>
+            <button class="primary-btn">Add to Try-On List</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2 class="section-title">Style Suggestions</h2>
+        <div class="item-card">
+          <div class="item-info">
+            <div class="item-image"></div>
+            <div class="item-details">
+              <h3>Cotton Crew Neck T-Shirt</h3>
+              <p>Would pair well with your denim jacket</p>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            <button class="secondary-btn">View Details</button>
+            <button class="primary-btn">Add to Mannequin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <script src="Scripts.js"></script>
 
 </body>
