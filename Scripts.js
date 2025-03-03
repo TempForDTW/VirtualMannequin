@@ -21,7 +21,7 @@ let headUnits = {
         this.Adult = value/8;
     }
 }
-
+//for github
 const sizings = {  //All of these are approximation made using an online human anatomy guide and a calculator to double check
     Teen:{
         Male:{
